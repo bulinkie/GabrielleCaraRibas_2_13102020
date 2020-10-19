@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3ff4ad9559.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <img src="images\logo\Reservia.svg" alt="reservia"> 
         <nav>
+            <a href="index.html"><img src="images\logo\Reservia.svg" alt="reservia"></a> 
             <a href="#">S'inscrire</a>
             <ul>
-                <li>
+                <li class="active">
                     <a href="#">Hébergements</a>
                 </li>
                 <li>
@@ -20,9 +23,48 @@
             </ul>
         </nav>
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
     </header>
     <main>
 
+        <!-- Section de Recherche -->
+        <section>
+            
+            <!-- Barre de recherche -->
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" name="recherche" id="recherche" placeholder="Ville">
+                <div>
+                    <i class="fas fa-search"></i>
+                    <p>Rechercher</p>
+                </div>
+            </div>
+            <!-- Filtres -->
+            <div>
+                <h3>Filtres</h3>
+                <div>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <p>Économique</p>
+                </div>
+                <div>
+                    <i class="fas fa-child"></i>
+                    <p>Familial</p>
+                </div>
+                <div>
+                    <i class="fas fa-heart"></i>
+                    <p>Romantique</p>
+                </div>
+                <div>
+                    <i class="fas fa-dog"></i>
+                    <p>Animaux autorisés</p>
+                </div>
+            </div>
+            <!-- Info résuktat de recherche -->
+            <div>
+                <i class="fas fa-info"></i>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </section>
     </main>
     <footer>
 
