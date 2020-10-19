@@ -48,3 +48,95 @@ li {
     padding-bottom: 1rem;
     border-bottom: 3px solid #0065FC;
 }
+.slogan{
+    padding: 1.2rem;
+    padding-top: 0;
+}
+h1{
+    font-size: 1.6rem;
+}
+
+/* -------------------- Main -------------------- */
+
+main{
+    padding: 1.2rem;
+}
+
+/* -------------------- Section de recherche -------------------- */
+.search-bar{
+    display: inline-flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 17px;
+    justify-content: space-between;
+}
+.search-bar > i{
+    padding: 1rem;
+
+}
+.search-bar input{
+    border: none;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;    
+}
+.search-bar input:focus{
+    outline: none;
+}
+.btn-search{
+    padding: 1rem;
+    color: white;
+    background-color: #0065FC;
+    border-radius: 17px;
+}
+.btn-search p{
+    display: none;
+}
+
+/* -------------------- Filtres -------------------- */
+
+.filtre{
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #D9D9D9;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    height: 3rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+.filtre i{
+    background-color: #DEEBFF;
+    border-radius: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+    margin-left: -2px;
+}
+.filtre p{
+    padding: 0 1.2rem 0 0.7rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* -------------------- Info résultat de recherche -------------------- */
+
+.info{
+    display: inline-flex;
+    align-items: center;
+}
+.info i{
+    border: 2px solid #D9D9D9;
+    border-radius: .6rem;
+    color: #0065FC;
+    font-size: .8rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-right: .5rem;
+}
