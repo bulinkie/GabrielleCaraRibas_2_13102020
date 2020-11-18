@@ -25,8 +25,14 @@ a:visited{
 }
 /* -------------------- Header -------------------- */
 
-header img{
+header .logo img{
     width: 100%;
+    max-width: 100px;
+}
+header .logo {
+    width: 50%;
+    padding: 1rem;
+    padding-top: 0;
 }
 /* header{
     display: flex;
@@ -53,14 +59,18 @@ nav a:visited{
 }
 nav ul{
     width: 100%;
-    padding-inline-start: 0;
+    padding-left: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
+    justify-content: space-between;
 }
-header li {
+.secondline {
     width: 50%;
     text-align: center;
     font-weight: 600;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #f2f2f2;
 }
 header nav li a{
     color: black;
@@ -69,19 +79,26 @@ header nav li a{
     color: #0065FC;
 }
 .active{
-    padding-bottom: 1rem;
-    border-bottom: 3px solid #0065FC;
+    border-color: #0065FC;
 }
-.inscrireli{
+
+/* .inscrireli{
     display: none;
     font-weight: bold;
-}
-.inscrireli a,
-.inscrireli a:visited {
+} */
+.inscrire a,
+.inscrire a:visited {
     color: #0065FC;
 }
+.logo{
+    order: -1;
+    text-align: left;
+}
 .inscrire{
-    display: block;
+    order: -1;
+    text-align: right;
+    padding: 1rem;
+    font-weight: 700;
 }
 .slogan{
     padding: 1.2rem;
@@ -113,19 +130,28 @@ h3{
 .search-bar{
     display: inline-flex;
     align-items: center;
-    background-color: #F2F2F2;
+    /* background-color: #F2F2F2; */
     border-radius: 17px;
     justify-content: space-between;
+    height: 50px;
+    border: 1px solid #f2f2f2;
 }
 .search-bar > i{
     padding: 1rem;
-
+    background-color: #f2f2f2;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 17px 0 0 17px;
 }
 .search-bar input{
     border: none;
     padding: 1rem;
     font-weight: 700;
-    font-size: 1rem;    
+    font-size: 1rem;
+    height: 48px;
+    box-sizing: border-box;
+    /* border: 1px solid #f2f2f2; */
+    /* width: calc(100% + 25px); */
 }
 .search-bar input:focus{
     outline: none;
@@ -135,6 +161,7 @@ h3{
     color: white;
     background-color: #0065FC;
     border-radius: 17px;
+    cursor: pointer;
 }
 .btn-search p{
     display: none;
@@ -152,6 +179,7 @@ h3{
     margin-right: 0.5rem;
     margin-bottom: 1rem;
     transition: all .2s;
+    cursor: pointer;
 }
 .filtre i{
     background-color: #DEEBFF;
@@ -170,7 +198,7 @@ h3{
     font-weight: 700;
 }
 
-/* -------------------- Info résultat de recherche -------------------- */
+/* -------------------- Info rÃ©sultat de recherche -------------------- */
 
 .info{
     display: inline-flex;
@@ -244,7 +272,7 @@ h3{
 .popularTitle h2{
     margin-bottom: 2rem;
 }
-/* -------------------- Hébergements -------------------- */
+/* -------------------- HÃ©bergements -------------------- */
 
 .Accomodation{
     border-radius: 20px;
@@ -282,7 +310,7 @@ h3{
     color: black;
 }
 
-/* -------------------- Activités -------------------- */
+/* -------------------- ActivitÃ©s -------------------- */
 
 .Activity{
     border-radius: 20px;
@@ -324,7 +352,7 @@ footer a{
 }
 footer ul{
     list-style: none;
-    padding-inline-start: 0;
+    padding-left: 0;
 }
 footer h3{
     margin-top: 2.5rem;
@@ -432,7 +460,7 @@ footer li{
     main {
         flex-direction: row;
         flex-wrap: wrap;
-
+        justify-content: center;
     }
     /* -------------------- header -------------------- */
     header img{
@@ -459,9 +487,10 @@ footer li{
         justify-content: space-between;
     }
     nav ul {
-        width: auto;
+        width: 100%;
         margin: 0;
     }
+
     header li {
         border-top: 3px solid transparent;
         border-bottom: none;
@@ -470,15 +499,22 @@ footer li{
         padding: 1rem;
         padding-top: 2.5rem;
     }
-    .inscrireli{
-        display: block;
+    .logo{
+        align-self: flex-start;
+        width: auto;
+        flex-grow: 2;
     }
-    .inscrire{
-        display: none;
+    .secondline{
+        width: auto;
+        border-bottom: none;
     }
+
     .active{
         border-top: 3px solid #0065FC;
-        border-bottom: none;
+    }
+    .inscrire{
+        order: unset;
+        padding-top: 2.5rem;
     }
 
     .slogan{
@@ -523,7 +559,7 @@ footer li{
         margin-left: 1rem;
     }
 
-    /* -------------------- Info résultat de recherche -------------------- */
+    /* -------------------- Info rÃ©sultat de recherche -------------------- */
 
     .info{
         margin-bottom: 2rem;
@@ -532,7 +568,7 @@ footer li{
         width: 100%;
     }
 
-        /* -------------------- Hébergements -------------------- */
+        /* -------------------- HÃ©bergements -------------------- */
     .Accomodations{
         display: flex;
         flex-wrap: wrap;
@@ -548,6 +584,7 @@ footer li{
         width: calc(70% - 3rem);
         /* padding-left: 2.5rem; */
         margin-right: 3rem;
+        max-width: 1252px;
     }
     .Accomodation{
         max-width: 350px;
@@ -562,7 +599,7 @@ footer li{
     .popularSection{
         order: 3;
         border-radius: 20px;
-        max-width: 500px;
+        max-width: 542px;
         min-width: 350px;
         width: 30%;
         display: flex;
@@ -577,7 +614,7 @@ footer li{
     .popular:last-child{
         margin-bottom: 0;
     }
-        /* -------------------- Activités -------------------- */
+        /* -------------------- ActivitÃ©s -------------------- */
 
     .ActivitySection{
         order: 4;
@@ -585,6 +622,7 @@ footer li{
         margin-top: 4rem;
         margin-bottom: 2rem;
         width: 100%;
+        max-width: 1807px;
     }
     .Activity {
         width: calc(25% - 2rem);
